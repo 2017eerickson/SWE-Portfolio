@@ -8,7 +8,7 @@ const items = [
     title: "Full-Stack Ecommerce Site",
     img: "../../crochetcorner.png",
     desc: " This is my first Full Stack project built with a React frontend , Django backend and Postgres database. I integrated stripe to sucessfully accept payments via stripes checkout session API. All planned, designed, and built in two weeks. ",
-    link: "https://eerickson2017.github.io/erickae.github.io/ecomerce-project/",
+    link: "https://github.com/2017eerickson/crochet-corner",
   },
   {
     id: 2,
