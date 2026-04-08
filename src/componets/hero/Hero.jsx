@@ -55,7 +55,7 @@ const Hero = () => {
             ERICKA ERICKSON
           </motion.h2>
           <motion.h1 variants={textVariants}>
-            React Frontend Developer
+            Full Stack Engineer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -77,7 +77,7 @@ const Hero = () => {
         animate="animate"
         className="slidingTextContainer"
       >
-        Creator Writer Web-Developer
+        Creative Full Stack Engineer
       </motion.div>
       <div className="imageContainer">
         <img src="/truetrueHero.png" alt="" />

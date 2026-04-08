@@ -16,14 +16,16 @@ const NavBar = () => {
         </motion.span>
         <div className="social">
           <a
+            href="https://www.linkedin.com/in/erickaerickson"
             target="_blank"
-            href="https://www.linkedin.com/in/ericka-erickson-7320872a3/"
+            rel="noopener noreferrer"
           >
             <img src="/linkedin.png" alt="" />
           </a>
           <a
+            href="https://github.com/2017eerickson"
             target="_blank"
-            href="https://github.com/eerickson2017/2017erickae.github.io"
+            rel="noopener noreferrer"
           >
             <img src="/github.png" alt="" />
           </a>
