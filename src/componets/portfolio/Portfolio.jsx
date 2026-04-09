@@ -53,7 +53,7 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>
-              <a target="_blank" href={item.link}>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
                 See Demo
               </a>
             </button>
