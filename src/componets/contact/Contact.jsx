@@ -29,7 +29,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_izlp498", "template_x8yfblv", form.current, {
+      .sendForm("service_thcggvm", "template_x8yfblv", form.current, {
         publicKey: "_4bCZP6ZBkNfgRgi-",
       })
       .then(
