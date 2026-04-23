@@ -5,20 +5,27 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
+    title: "Full-Stack Grocery Assistant Site",
+    img: "../../earthlings.png",
+    desc: " This is my Second Full Stack project built with a React frontend , Django backend and Postgres database. I integrated Gemini's api into my backend to create a vegan verify check feature. I used a Claude agent and Figma's MCP to turn my designs into Tailwind css as well as accomplish planning out specific coding tasks. This site also uses JWT for authentation. Planned, designed, built , tested, and securely launched with AWS in two weeks. ",
+    link: "https://aisleearthlings.com",
+  },
+  {
+    id: 2,
     title: "Full-Stack Ecommerce Site",
     img: "../../crochetcorner.png",
     desc: " This is my first Full Stack project built with a React frontend , Django backend and Postgres database. I integrated stripe to sucessfully accept payments via stripes checkout session API. MVP all planned, designed, and built in two weeks. ",
     link: "https://github.com/2017eerickson/crochet-corner",
   },
   {
-    id: 2,
+    id: 3,
     title: "Ecommerce Site",
     img: "../../ecommerce.png",
     desc: " Made in plain CSS, HTML, and JavaSciprt to showcase frontend fundamentals. This is a responsive e-commerce site that has an about, blog, contact, shop, and checkout page.",
     link: "https://eerickson2017.github.io/erickae.github.io/ecomerce-project/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Promotional Email",
     img: "../../thriveEmail.png",
     desc: "This email is a responsive  promotional template , desgined to be reuasble and scalable. Showcasing the fundamentals of HTMl, CSS, and photoshop skills on a high standard marketing level.",
@@ -26,7 +33,7 @@ const items = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Newsletter Email",
     img: "../../newsletter.png",
     desc: "This is a  responsive newsletter email template recreated to demonstrate skill and ability to perform at a high level with quality, reusuability and consistant compatibilty between email providers in mind. ",
