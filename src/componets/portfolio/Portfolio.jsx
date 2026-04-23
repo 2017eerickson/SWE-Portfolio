@@ -5,9 +5,9 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Full-Stack Grocery Assistant Site",
+    title: "Full-Stack Grocery Assistant App",
     img: "../../earthlings.png",
-    desc: " This is my Second Full Stack project built with a React frontend , Django backend and Postgres database. I integrated Gemini's api into my backend to create a vegan verify check feature. I used a Claude agent and Figma's MCP to turn my designs into Tailwind css as well as accomplish planning out specific coding tasks. This site also uses JWT for authentation. Planned, designed, built , tested, and securely launched with AWS in two weeks. ",
+    desc:" Full-stack application built with React, Django, and PostgreSQL, featuring a custom Gemini AI integration that programmatically analyzes product ingredients to verify vegan compliance. Kroger API integration surfaces real-time vegan products and store data, while JWT handles secure authentication throughout. Leveraged Figma's MCP to streamline design-to-Tailwind implementation. Planned, designed, built, tested, and securley deployed using AWS within two weeks.",
     link: "https://aisleearthlings.com",
   },
   {
