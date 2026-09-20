@@ -61,7 +61,7 @@ const Hero = () => {
           <motion.img
             variants={textVariants}
             animate="scrollButton"
-            src="/scroll.png"
+            src={`${import.meta.env.BASE_URL}scroll.png`}
             alt=""
           />
         </motion.div>
@@ -75,7 +75,7 @@ const Hero = () => {
         Creative Full Stack Engineer
       </motion.div>
       <div className="imageContainer">
-        <img src="/truetrueHero.png" alt="" />
+        <img src={`${import.meta.env.BASE_URL}truetrueHero.png`} alt="" />
       </div>
     </div>
   );
