@@ -60,18 +60,17 @@ const Services = () => {
         >
           <h1>Design</h1>
           <p>
-            I help design your vision, and gague the feasibility of it in
-            execution.
+            I bring your ideas to life by defining scope, assessing timelines, and navigating tradeoffs for the best outcome.
           </p>
-          <button>G0</button>
+          <a href="#Contact"><button>GO</button></a>
         </motion.div>
         <motion.div
           whileHover={{ background: "lightgray", color: "black" }}
           className="box"
         >
           <h1>Develop</h1>
-          <p>I help bring the design into a tanagable end product.</p>
-          <button>G0</button>
+          <p>I build the full-stack application from design to deployment, keeping you updated at every milestone.</p>
+          <a href="#Contact"><button>GO</button></a>
         </motion.div>
         <motion.div
           whileHover={{ background: "lightgray", color: "black" }}
@@ -79,18 +78,17 @@ const Services = () => {
         >
           <h1>Test</h1>
           <p>
-            I test the design and functionality over multiple browsers to ensure
-            smooth launch.
+            I perform unit and end-to-end testing to ensure everything works as designed and handles edge cases gracefully.
           </p>
-          <button>G0</button>
+          <a href="#Contact"><button>GO</button></a>
         </motion.div>
         <motion.div
           whileHover={{ background: "lightgray", color: "black" }}
           className="box"
         >
           <h1>launch</h1>
-          <p>I help launch and host site your site. </p>
-          <button>G0</button>
+          <p>I handle deployment and secure hosting to get your site live and running. </p>
+          <a href="#Contact"><button>GO</button></a>
         </motion.div>
       </motion.div>
     </motion.div>

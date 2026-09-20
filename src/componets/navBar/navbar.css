@@ -36,7 +36,7 @@ section {
   justify-content: space-between;
   height: 100%;
 }
-@media (max-width: 738px) {
+@media (max-width: 100rem) {
   .navbar .wrapper {
     justify-content: flex-end;
     padding: 20px;
@@ -71,6 +71,6 @@ section {
   gap: 20px;
 }
 .navbar .wrapper .social img {
-  width: 18px;
-  height: 18px;
+  width: 50rem;
+  height: 50rem;
 }/*# sourceMappingURL=navbar.css.map */

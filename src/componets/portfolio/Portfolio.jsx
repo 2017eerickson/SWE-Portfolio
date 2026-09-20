@@ -8,7 +8,7 @@ const items = [
     title: "Full-Stack Grocery Assistant App",
     img: "../../earthlings.png",
     desc:" Full-stack application built with React, Django, and PostgreSQL, featuring a custom Gemini AI integration that programmatically analyzes product ingredients to verify vegan compliance. Kroger API integration surfaces real-time vegan products and store data, while JWT handles secure authentication throughout. Leveraged Figma's MCP to streamline design-to-Tailwind implementation. Planned, designed, built, tested, and securley deployed using AWS within two weeks.",
-    link: "https://aisleearthlings.com",
+    link: "https://github.com/2017eerickson/Aisle-Earthlings",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const items = [
   },
   {
     id: 3,
-    title: "Ecommerce Site",
+    title: "Frontend Ecommerce Site",
     img: "../../ecommerce.png",
     desc: " Made in plain CSS, HTML, and JavaSciprt to showcase frontend fundamentals. This is a responsive e-commerce site that has an about, blog, contact, shop, and checkout page.",
     link: "https://eerickson2017.github.io/erickae.github.io/ecomerce-project/",
@@ -60,9 +60,12 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                See Demo
-              </a>
+              {
+                item.link.includes("github.io")? 
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">See Demo</a>
+                : 
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">See Github</a>
+              }
             </button>
           </motion.div>
         </div>
