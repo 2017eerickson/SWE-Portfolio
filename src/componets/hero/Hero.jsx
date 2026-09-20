@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const textVariants = {
   initial: {
     x: -500,
-    opacity: 0,
+    opacity: 1,
   },
   animate: {
     x: 0,
@@ -57,12 +57,7 @@ const Hero = () => {
           <motion.h1 variants={textVariants}>
             Full Stack Engineer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See latest work
-            </motion.button>
-            <motion.button variants={textVariants}>Contact me </motion.button>
-          </motion.div>
+         
           <motion.img
             variants={textVariants}
             animate="scrollButton"
