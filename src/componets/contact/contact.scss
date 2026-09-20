@@ -52,6 +52,15 @@
     }
   }
 
+  .item a {                                                                                                                                                        
+    color: orange;                                                                                                                                                 
+    text-decoration: underline;                                                                                                                                    
+    cursor: pointer;                                                                                                                                               
+                                                                                                                                                                   
+    &:hover {                                                                                                                                                      
+      opacity: 0.8;                                                                                                                                                
+    }                                                                                                                                                              
+  }     
   .formContainer {
     flex: 1;
     position: relative;

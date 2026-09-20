@@ -52,16 +52,18 @@ const Contact = () => {
       >
         <motion.h1 variants={variants}> Let&apos;s work together</motion.h1>
         <motion.div variants={variants} className="item">
-          <h2>Email</h2>
-          <span>2017Eckson@gmail.com</span>
+          <h2>Location</h2>
+          <span>San Diego based</span>
         </motion.div>
         <motion.div variants={variants} className="item">
-          <h2>Address</h2>
-          <span>San Diego</span>
+          <h2>Linkedin</h2>
+          <span><a href="https://www.linkedin.com/in/erickaerickson/" target="_blank" rel="noopener noreferrer">erickaerickson</a></span>
         </motion.div>
         <motion.div variants={variants} className="item">
-          <h2>Phone</h2>
-          <span>+1 (760)-888-8888</span>
+          <h2>References</h2>
+         <a href="https://www.linkedin.com/in/erickaerickson/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">                  
+    View on LinkedIn                                                                                                                                               
+  </a>  
         </motion.div>
       </motion.div>
       <div className="formContainer">
