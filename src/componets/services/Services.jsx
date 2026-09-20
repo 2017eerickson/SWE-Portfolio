@@ -55,7 +55,7 @@ const Services = () => {
       </motion.div>
       <motion.div variants={variants} className="listContainer">
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
           className="box"
         >
           <h1>Design</h1>
@@ -65,7 +65,7 @@ const Services = () => {
           <a href="#Contact"><button>GO</button></a>
         </motion.div>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
           className="box"
         >
           <h1>Develop</h1>
@@ -73,7 +73,7 @@ const Services = () => {
           <a href="#Contact"><button>GO</button></a>
         </motion.div>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
           className="box"
         >
           <h1>Test</h1>
@@ -83,7 +83,7 @@ const Services = () => {
           <a href="#Contact"><button>GO</button></a>
         </motion.div>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
           className="box"
         >
           <h1>launch</h1>
