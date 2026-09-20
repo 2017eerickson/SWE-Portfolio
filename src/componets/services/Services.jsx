@@ -40,7 +40,7 @@ const Services = () => {
       </motion.div>
       <motion.div variants={variants} className="titleContainer">
         <div className="title">
-          <img src="./people.webp" />
+          <img src="/people.webp" />
           <h1>
             <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
