@@ -71,7 +71,7 @@ const Contact = () => {
           className="phoneSvg"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: 3, duration: 0.5 }}
+          transition={{ delay: 3, duration: .05 }}
         >
           <svg
             width="800px"

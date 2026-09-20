@@ -34,7 +34,7 @@ const Services = () => {
       <motion.div variants={variants} className="textContainer">
         <p>
           I focus on Improving
-          <br />a brand's online Impression
+          <br />a brands online Impression
         </p>
         <hr />
       </motion.div>
