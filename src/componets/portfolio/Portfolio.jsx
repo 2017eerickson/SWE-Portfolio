@@ -8,7 +8,7 @@ const items = [
     title: "Full-Stack Grocery Assistant App",
     img: `${import.meta.env.BASE_URL}earthlings.png`,
     desc:" Full-stack application built with React, Django, and PostgreSQL, featuring a custom Gemini AI integration that programmatically analyzes product ingredients to verify vegan compliance. Kroger API integration surfaces real-time vegan products and store data, while JWT handles secure authentication throughout. Leveraged Figma's MCP to streamline design-to-Tailwind implementation. Planned, designed, built, tested, and securley deployed using AWS within two weeks.",
-    link: "https://github.com/2017eerickson/Aisle-Earthlings",
+    link: "https://aisleearthlings.com/",
   },
   {
     id: 2,
