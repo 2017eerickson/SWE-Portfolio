@@ -61,10 +61,11 @@ const Single = ({ item }) => {
             <p>{item.desc}</p>
             <button>
               {
-                item.link.includes("github")? 
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">See Github</a>
-                : 
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">See Live Demo</a>
+                item.link.includes("github.com")                                                                                                                    
+                  ? <a href={item.link} target="_blank" rel="noopener noreferrer">See Github</a>                                                                    
+                  : item.link.includes("github.io")                                                                                                                 
+                  ? <a href={item.link} target="_blank" rel="noopener noreferrer">See Live Demo</a>                                                                 
+                  : <a href={item.link} target="_blank" rel="noopener noreferrer">Visit Live Site</a> 
               }
             </button>
           </motion.div>
