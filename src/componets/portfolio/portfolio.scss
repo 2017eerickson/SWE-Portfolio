@@ -73,6 +73,7 @@
     .imageContainer {
       flex: 0.5;
       height: 50%;
+      width: 100%;
 
       @include tablet {
         height: 40%;
