@@ -1,58 +1,77 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./portfolio.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform, AnimatePresence } from "framer-motion";
 
 const items = [
   {
     id: 1,
-    title: "Relationship IOS App",
-    img: [ `${import.meta.env.BASE_URL}constellate1.png` ],
-    desc:" Full-stack mobile app built with React Native, Django, and PostgreSQL that gamifies relationship wellness through shared daily activities. A custom streak engine and stardust reward system track cross-user engagement across mood check-ins, journal prompts, and affection exchanges in real time. Skia canvas renders animated planet environments with orbital mechanics. Google SSO and JWT handle secure authentication, with Docker managing backend infrastructure.",
+    title: "Constellate — React Native Relationship Platform",
+    img: [
+      `${import.meta.env.BASE_URL}constellate/home.png`,
+      `${import.meta.env.BASE_URL}constellate/constellation.png`,
+      `${import.meta.env.BASE_URL}constellate/planet.png`,
+      `${import.meta.env.BASE_URL}constellate/journal.png`,
+      `${import.meta.env.BASE_URL}constellate/streak.png`,
+      `${import.meta.env.BASE_URL}constellate/affection-feature.png`,
+      `${import.meta.env.BASE_URL}constellate/stardust.png`,
+      `${import.meta.env.BASE_URL}constellate/mood-feature.png`,
+      `${import.meta.env.BASE_URL}constellate/partners.png`,
+      `${import.meta.env.BASE_URL}constellate/partner-details.png`,
+      `${import.meta.env.BASE_URL}constellate/connect.png`,
+      `${import.meta.env.BASE_URL}constellate/settings.png`,
+    ],
+    desc: "- Built a cross-platform mobile app with React Native, Django, and PostgreSQL\n- Containerized backend infrastructure with Docker\n- Modeled relational data with Django ORM\n- Engineered a custom streak engine and reward system\n- Implemented Google SSO and JWT authentication\n- Achieved 80% test coverage with Maestro and Pytest",
     link: "https://github.com/2017eerickson/Constellate",
   },
   {
     id: 2,
-    title: "Full-Stack Grocery Assistant App",
+    title: "Aisle Earthlings — AI-Ingerated Grocery Platform",
     img: [`${import.meta.env.BASE_URL}earthlings.png`],
-    desc:" Full-stack application built with React, Django, and PostgreSQL, featuring a custom Gemini AI integration that programmatically analyzes product ingredients to verify vegan compliance. Kroger API integration surfaces real-time vegan products and store data, while JWT handles secure authentication throughout. Leveraged Figma's MCP to streamline design-to-Tailwind implementation. Planned, designed, built, tested, and securley deployed using AWS within two weeks.",
+    desc: "- Built a full-stack app with React, Django, and PostgreSQL\n- Integrated Gemini AI to programmatically verify vegan compliance\n- Connected Kroger API for real-time product and store data\n- Implemented JWT authentication throughout\n- CI/CD pipeline with GitHub Actions\n- Deployed to AWS within a two-week sprint",
     link: "https://aisleearthlings.com/",
   },
   {
     id: 3,
-    title: "Full-Stack Ecommerce Site",
+    title: "Crochet Corner — Full-Stack Ecommerce Platform",
     img: [`${import.meta.env.BASE_URL}crochetcorner.png`],
-    desc: " This is my first Full Stack project built with a React frontend , Django backend and Postgres database. I integrated stripe to sucessfully accept payments via stripes checkout session API. MVP all planned, designed, and built in two weeks. ",
+    desc: "- Built with React, Django, and PostgreSQL\n- Containerized backend infrastructure with Docker\n- Integrated Stripe Checkout Session API for payments\n- Planned, designed, and shipped MVP in two weeks",
     link: "https://github.com/2017eerickson/crochet-corner",
   },
   {
     id: 4,
-    title: "Frontend Ecommerce Site",
+    title: "Responsive Ecommerce Storefront — Frontend Only",
     img: [`${import.meta.env.BASE_URL}ecommerce.png`],
-    desc: " Made in plain CSS, HTML, and JavaSciprt to showcase frontend fundamentals. This is a responsive e-commerce site that has an about, blog, contact, shop, and checkout page.",
+    desc: "- Built with vanilla HTML, CSS, and JavaScript\n- Responsive design across shop, blog, contact, and checkout pages",
     link: "https://eerickson2017.github.io/erickae.github.io/ecomerce-project/",
   },
   {
     id: 5,
-    title: "Promotional Email",
+    title: "Promotional Email Template",
     img: [`${import.meta.env.BASE_URL}thriveEmail.png`],
-    desc: "This email is a responsive  promotional template , desgined to be reuasble and scalable. Showcasing the fundamentals of HTMl, CSS, and photoshop skills on a high standard marketing level.",
+    desc: "- Responsive, reusable email template\n- Built with HTML, CSS, and Photoshop",
     link: "https://eerickson2017.github.io/erickae.github.io/Promotional-email/",
   },
 
   {
     id: 6,
-    title: "Newsletter Email",
+    title: "Newsletter Email Template",
     img: [`${import.meta.env.BASE_URL}newsletter.png`],
-    desc: "This is a  responsive newsletter email template recreated to demonstrate skill and ability to perform at a high level with quality, reusuability and consistant compatibilty between email providers in mind. ",
+    desc: "- Built from scratch with HTML, CSS, and JavaScript\n- Translated design mockup into pixel-perfect code\n- Cross-client compatible across email providers",
     link: "https://eerickson2017.github.io/erickae.github.io/Newsletter-email/",
   }
 ];
 
 const Single = ({ item }) => {
   const ref = useRef();
+  const [currentIndex, setCurrentIndex] = useState(0);
   const { scrollYProgress } = useScroll({
     target: ref,
   });
+
+  const handlePrev = () =>
+    setCurrentIndex((prev) => (prev - 1 + item.img.length) % item.img.length);
+  const handleNext = () =>
+    setCurrentIndex((prev) => (prev + 1) % item.img.length);
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
@@ -61,12 +80,42 @@ const Single = ({ item }) => {
       <div className="container">
         <div className="wrapper">
           <div ref={ref} className="imageContainer">
-            {item.img.map((img, index) => (
-              <img key={index} src={img} alt="" />
-            ))}
+            {item.img.length === 1 ? (
+              <img src={item.img[0]} alt="" />
+            ) : (
+              <>
+                <button className="carouselBtn prevBtn" onClick={handlePrev} aria-label="Previous image">&#8249;</button>
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentIndex}
+                    src={item.img[currentIndex]}
+                    alt=""
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </AnimatePresence>
+                <button className="carouselBtn nextBtn" onClick={handleNext} aria-label="Next image">&#8250;</button>
+                <div className="carouselDots">
+                  {item.img.map((_, index) => (
+                    <span
+                      key={index}
+                      className={index === currentIndex ? "active" : ""}
+                      onClick={() => setCurrentIndex(index)}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
           <motion.div style={{ y }} className="textContainer">
-            <h2>{item.title}</h2>
+            <h2>
+              {item.title.split(" — ")[0]}
+              {item.title.includes(" — ") && (
+                <span className="subtitle">{item.title.split(" — ")[1]}</span>
+              )}
+            </h2>
             <p>{item.desc}</p>
             <button>
               {

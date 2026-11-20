@@ -44,18 +44,19 @@
 
 .container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 
   .wrapper {
     max-width: 1366px;
     height: 100%;
-    margin: auto;
+    width:97%;
+    margin-top: 10vh;
     display: flex;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
 
@@ -72,11 +73,15 @@
 
     .imageContainer {
       flex: 0.5;
-      height: 50%;
+      height: 70vh;
       width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include tablet {
-        height: 40%;
+        height: 40vh;
       }
 
       img {
@@ -91,10 +96,79 @@
           border-radius: 5px;
         }
       }
+
+      .carouselBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 8px 12px;
+        border-radius: 50%;
+
+        &:hover {
+          background: orange;
+        }
+
+        @include mobile {
+          font-size: 16px;
+          padding: 4px 8px;
+        }
+        @include tablet {
+          font-size: 18px;
+        }
+      }
+
+      .prevBtn {
+        left: 10px;
+        @include mobile { left: 5px; }
+      }
+
+      .nextBtn {
+        right: 10px;
+        @include mobile { right: 5px; }
+      }
+
+      .carouselDots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 2;
+
+        @include mobile {
+          gap: 6px;
+        }
+
+        span {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          @include mobile {
+            width: 8px;
+            height: 8px;
+          }
+
+          &.active {
+            background: orange;
+          }
+        }
+      }
     }
 
     .textContainer {
       flex: 0.5;
+      margin-top: -20vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -112,7 +186,7 @@
       }
 
       h2 {
-        font-size: 72px;
+        font-size: 60px;
         font-weight: bold;
 
         @include mobile {
@@ -121,11 +195,25 @@
         @include tablet {
           font-size: 45px;
         }
+
+        .subtitle {
+          display: block;
+          font-size: 24px;
+          font-weight: 400;
+
+          @include mobile {
+            font-size: 16px;
+          }
+          @include tablet {
+            font-size: 20px;
+          }
+        }
       }
 
       p {
         color: gray;
         font-size: 20px;
+        white-space: pre-line;
 
         @include mobile {
           font-size: 15px;
